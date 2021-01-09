@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<item>
+		<color android:color="@color/splash_background"/>
+	</item>
+	<item
+		android:width="300dp"
+		android:height="100dp"
+		android:drawable="@drawable/logoo"
+		android:gravity="center"/>
+
+	<item>
+		<shape android:shape="oval" android:visible="true"/>
+	</item>
+		
+</layer-list>

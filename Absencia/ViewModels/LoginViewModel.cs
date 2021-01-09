@@ -1,4 +1,5 @@
 ﻿using Absencia.Views;
+using Plugin.Toast;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,6 +10,19 @@ namespace Absencia.ViewModels
     public class LoginViewModel : BaseViewModel
     {
         public Command LoginCommand { get; }
+        public String Name { get; set; }
+        private string err;
+        public String Err {
+            get
+            {
+                return err;
+            }
+            set
+            {
+                err = value;
+                OnPropertyChanged(nameof(err)); 
+            }
+        }
 
         public LoginViewModel()
         {
@@ -17,8 +31,10 @@ namespace Absencia.ViewModels
 
         private async void OnLoginClicked(object obj)
         {
-            // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-            await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+            if (Name == "youssef")
+                await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+            else
+                CrossToastPopUp.Current.ShowToastMessage("Ops! Wrong <)");
         }
     }
 }

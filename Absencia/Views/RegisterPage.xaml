@@ -6,19 +6,27 @@
              mc:Ignorable="d"
              x:Class="Absencia.Views.RegisterPage"
              Shell.NavBarIsVisible="False"
-             BackgroundColor="#457b9d">
+             BackgroundColor="#96d1ff">
     <ContentPage.Content>
-        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+        <StackLayout Padding="20,0,20,0" VerticalOptions="Center">
             <StackLayout.Resources>
                 <!-- Implicit style -->
                 <Style TargetType="Entry">
                     <Setter Property="FontSize" Value="Medium" />
                     <Setter Property="WidthRequest" Value="300"/>
                     <Setter Property="HeightRequest" Value="60"/>
-                    <Setter Property="BackgroundColor" Value="#f1faee" />
-                    <Setter Property="TextColor" Value="#1d3557" />
+                    <Setter Property="BackgroundColor" Value="#FFF" />
+                    <Setter Property="TextColor" Value="#1d3557"/>
                 </Style>
             </StackLayout.Resources>
+            <Label
+                Text="Absencia"
+                HorizontalOptions="Center"
+                FontSize="70"
+                TextColor="White"
+                Margin="0,0,0,10"
+                TextTransform="Uppercase"
+                TextDecorations="Underline"/>
             <Entry Placeholder="Name" 
                    x:Name="name" Text="{Binding Name}"/>
             <Entry Placeholder="Password" 
@@ -30,21 +38,30 @@
                    x:Name="pwd"
                    Text="{Binding pwd}"/>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
+                <StackLayout.Resources>
+                    <!-- Implicit style -->
+                    <Style TargetType="Button">
+                        <Setter Property="FontSize" Value="Medium" />
+                        <Setter Property="WidthRequest" Value="130"/>
+                        <Setter Property="HeightRequest" Value="60"/>
+                        <Setter Property="BackgroundColor" Value="#f1faee" />
+                        <Setter Property="TextColor" Value="#1d3557"/>
+                        <Setter Property="CornerRadius" Value="50"/>
+                        <Setter Property="FontSize" Value="22"/>
+                        <Setter Property="BorderWidth" Value="1"/>
+                        <Setter Property="FontFamily" Value="Serif"/>
+                    </Style>
+                </StackLayout.Resources>
                 <Button  
-                    WidthRequest="150" 
-                    BackgroundColor="#f1faee" 
-                    BorderWidth="1" 
-                    BorderColor="Black" 
+                    BackgroundColor="#FFF" 
                     Text="Register"
-                    TextColor="#1d3557"
-                    CornerRadius="50"
+                    TextColor="#96d1ff"
                     Command="{Binding Register}"
                     Margin="0,0,20,0"/>
                 <Button 
-                    WidthRequest="150" 
+                    BorderColor="White" 
                     BackgroundColor="Transparent" 
-                    Text="Login" 
-                    CornerRadius="50" 
+                    Text="Login"
                     TextColor="White"
                     Command="{Binding Login}"
                     Margin="20,0,0,0"/>

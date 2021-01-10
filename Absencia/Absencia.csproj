@@ -6,6 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Fonts\font.ttf" />
+    <None Remove="Resources\Fonts\majalla.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Fonts\font.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\majalla.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Acr.UserDialogs" Version="7.1.0.470" />
     <PackageReference Include="Plugin.Toast" Version="2.2.0" />
     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1451" />  

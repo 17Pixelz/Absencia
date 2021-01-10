@@ -15,18 +15,6 @@
     <Shell.Resources>
         <ResourceDictionary>
 
-
-            <!-- Defining The Fonts -->
-            <OnPlatform x:TypeArguments="x:String" x:Key="Font">
-                <On Platform="Android" Value="majalla.ttf#majalla" />
-                <On Platform="iOS" Value="majalla" />
-            </OnPlatform>
-            <OnPlatform x:TypeArguments="x:String" x:Key="FontBold">
-                <On Platform="Android" Value="majallab.ttf#majallab" />
-                <On Platform="iOS" Value="majallab" />
-            </OnPlatform>
-            
-            
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.BackgroundColor" Value="#457b9d" />
                 <Setter Property="Shell.ForegroundColor" Value="#1d3557" />
@@ -50,7 +38,7 @@
             <Style Class="FlyoutItemLabelStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="#1d3557"></Setter>
                 <Setter Property="HeightRequest" Value="100"></Setter>
-                <Setter Property="FontFamily" Value="{StaticResource Font}"/>
+                <Setter Property="FontFamily" Value="fontoo"/>
             </Style>
             
             <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
@@ -97,15 +85,15 @@
 
 
             <Style TargetType="Entry">
-                <Setter Property="FontFamily" Value="{StaticResource Font}" />
+                <Setter Property="FontFamily" Value="fontoo" />
                 <Setter Property="FontSize" Value="30" />
             </Style>
             <Style TargetType="Button">
-                <Setter Property="FontFamily" Value="{StaticResource FontBold}" />
-                <Setter Property="FontSize" Value="26" />
+                <Setter Property="FontFamily" Value="fontoo" />
+                <Setter Property="FontSize" Value="24" />
             </Style>
             <Style TargetType="Label">
-                <Setter Property="FontFamily" Value="{StaticResource FontBold}" />
+                <Setter Property="FontFamily" Value="fontoo" />
                 <Setter Property="FontSize" Value="26" />
             </Style>
         </ResourceDictionary>
@@ -133,7 +121,7 @@
                    Margin="5"/>
                 <Label Grid.Row="1" Grid.Column="1"
                    Text="{Binding Title}"
-                   FontFamily="{StaticResource Font}"
+                   FontFamily="fontoo"
                    FontSize="50"
                    VerticalTextAlignment="Center" />
             </Grid>
@@ -162,7 +150,7 @@
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="1"
                            FontSize="50"
-                           FontFamily="{StaticResource Font}"
+                           FontFamily="fontoo"
                        Margin="0,200,0,0"           
                        Text="{Binding Text}"/>
                 </Grid>

@@ -11,22 +11,14 @@ namespace Absencia.ViewModels
     {
         public Command LoginCommand { get; }
         public String Name { get; set; }
-        private string err;
-        public String Err {
-            get
-            {
-                return err;
-            }
-            set
-            {
-                err = value;
-                OnPropertyChanged(nameof(err)); 
-            }
-        }
+
+        public Command Register { get; }
+        
 
         public LoginViewModel()
         {
             LoginCommand = new Command(OnLoginClicked);
+            Register = new Command(OnRegisterClicked);
         }
 
         private async void OnLoginClicked(object obj)
@@ -35,6 +27,11 @@ namespace Absencia.ViewModels
                 await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
             else
                 CrossToastPopUp.Current.ShowToastMessage("Ops! Wrong <)");
+        }
+        private async void OnRegisterClicked(object obj)
+        {
+            await Shell.Current.GoToAsync($"//{nameof(RegisterPage)}");
+  
         }
     }
 }

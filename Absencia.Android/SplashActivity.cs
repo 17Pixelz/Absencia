@@ -31,7 +31,7 @@ namespace Absencia.Droid
         }
 
         // Simulates background work that happens behind the splash screen
-        async void SimulateStartup()
+        void SimulateStartup()
         {
             StartActivity(new Intent(Application.Context, typeof(MainActivity)));
         }

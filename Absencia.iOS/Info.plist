@@ -7,6 +7,11 @@
         <integer>1</integer>
         <integer>2</integer>
     </array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>majalla.ttf</string>
+		<string>majallab.ttf</string>
+	</array>
     <key>UISupportedInterfaceOrientations</key>
     <array>
         <string>UIInterfaceOrientationPortrait</string>
